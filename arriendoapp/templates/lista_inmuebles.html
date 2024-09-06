@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+<div class="content-container">
+    
+    <h1 class="mb-5 text-center">Listado de arriendos en Arriendos Montt</h1>
+    
+  
+    
+    <!-- Container para mostrar los resultados de la búsqueda -->
+    <div id="inmuebles-container">
+        {% if inmuebles %}
+        <div class="inmuebles-grid">
+            {% for inmueble in inmuebles %}
+            <div class="inmueble-card">
+                <div class="card-header">
+                    <h2>{{ inmueble.nombre }}</h2>
+                </div>
+                <div class="card-body">
+                    {% if inmueble.imagen_principal %}
+                        <img src="{{ inmueble.imagen_principal.url }}" alt="{{ inmueble.nombre }}" class="card-img">
+                    {% else %}
+                        <img src="{% static 'default_image.jpg' %}" alt="Imagen no disponible" class="card-img">
+                    {% endif %}
+                    
+                    <p class="descripcion">{{ inmueble.descripcion|truncatewords:20 }}</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <i class="fas fa-dollar-sign"></i> Precio: {{ inmueble.precio_arriendo }}
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-map-marker-alt"></i> Comuna: {{ inmueble.comuna }}
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'detalle_inmueble' inmueble.id %}" class="btn btn-primary btn-block">Ver detalles</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="alert alert-info" role="alert">
+            <i class="fas fa-info-circle"></i> No hay inmuebles disponibles en este momento.
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

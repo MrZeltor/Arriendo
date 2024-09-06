@@ -1,0 +1,614 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000; /* Fondo negro para todo el cuerpo */
+    color: #ffffff; /* Texto blanco para contraste */
+    line-height: 1.6;
+}
+
+.main-header {
+    background-color: #333333; /* Color de fondo gris oscuro */
+    padding: 2rem 0;
+}
+
+.site-title {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.site-description {
+    font-size: 1.2rem;
+    color: #cccccc;
+}
+
+
+.container {
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 3px solid #9bb913;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.form-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #111922;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* General Navbar Styles */
+/* Ajustes generales del navbar */
+/* Ajustes generales del navbar */
+.navbar {
+    padding: 0.5rem 1rem; /* Espacio interno del navbar (arriba/abajo y derecha/izquierda) */
+}
+.navbar-brand {
+    margin-right: 20px; /* Añade un margen a la derecha del logo para separarlo del siguiente elemento */
+}
+
+/* Ajuste del logo */
+.navbar-brand img {
+    max-height: 60px; /* Altura máxima del logo para que se ajuste al diseño del navbar */
+}
+
+/* Espaciado y alineación de los enlaces de navegación */
+.navbar-nav .nav-item {
+    margin-right: 1.5rem; /* Espacio a la derecha de cada elemento de navegación */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.5rem; /* Tamaño de fuente para los enlaces */
+    font-weight: normal; /* Ajusta el peso de la fuente para evitar negritas */
+}
+
+/* Ajuste del título en el navbar (si lo hay) */
+.navbar-title {
+    font-size: 1.2rem; /* Tamaño de fuente del título del navbar, igualando el tamaño de los enlaces */
+    font-weight: normal; /* Evita que el texto del título sea en negrita */
+}
+
+/* Ajuste del campo de búsqueda */
+.form-control {
+    max-width: 200px; /* Ancho máximo del campo de búsqueda para evitar que sea demasiado ancho */
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con transparencia para el campo de búsqueda */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borde blanco con transparencia */
+}
+
+/* Estilo del botón de búsqueda */
+.btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.5); /* Color del borde del botón con transparencia */
+    color: rgba(255, 255, 255, 0.9); /* Color del texto del botón con algo de transparencia */
+}
+
+/* Ajuste del contenedor del buscador y dropdown */
+.collapse .d-flex {
+    flex-grow: 1; /* Permite que el formulario de búsqueda y el dropdown se expandan adecuadamente */
+    align-items: center; /* Alinea verticalmente los elementos dentro del contenedor */
+    justify-content: flex-end; /* Alinea el contenido a la derecha dentro del contenedor */
+}
+
+/* Ajustes específicos del formulario de búsqueda */
+form.d-flex {
+    display: flex;
+    flex-direction: row; /* Alinea los elementos en fila */
+}
+
+input.form-control {
+    margin-right: 0.5rem; /* Espacio entre el input y el botón */
+}
+
+button.btn-outline-light {
+    /* Ancho fijo para el botón para evitar que se expanda demasiado */
+    width: auto;
+    flex-shrink: 0;
+}
+
+
+
+
+/* Ajusta el contenedor del carrusel y el texto de presentación */
+/* Asegúrate de que la vista general cubra toda la pantalla */
+.inicio-container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    overflow: hidden;
+}
+
+/* Ajusta el contenedor del carrusel y el texto de presentación */
+.carrusel-container, .texto-presentacion {
+    flex: 1; /* Ambos elementos ocupan el mismo espacio */
+}
+
+/* Ajusta el contenedor del carrusel */
+.carrusel-container {
+    width: 100%;
+    height: 100%; /* Ocupa toda la altura del contenedor padre */
+}
+
+/* Ajusta el tamaño del carrusel */
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la imagen cubra el área sin deformarse */
+}
+
+/* Estilo para el texto de presentación */
+.texto-presentacion {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea el texto en la parte superior del contenedor */
+    justify-content: flex-start; /* Alinea el contenido en la parte superior */
+    height: 100%; /* Ocupa toda la altura del contenedor padre */
+    margin-top: 20px; 
+}
+
+
+.texto-presentacion h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.texto-presentacion p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilos del login */
+/* Estilos del login */
+#login-container {
+    height: 100vh; /* Altura completa de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%;
+    max-width: 400px; /* Limita el ancho a 400px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    min-height: 400px; /* Mínima altura para la caja de login */
+    padding: 20px; /* Padding interno para mejor espaciado */
+}
+
+.login-box h1 {
+    color: #333333;
+    text-align: center;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente los elementos del formulario */
+}
+
+.login-box .form-label {
+    color: #333333;
+    text-align: center; /* Centra el texto del label */
+    margin-bottom: 5px; /* Espacio entre label y input */
+}
+
+.login-box .form-control {
+    border-radius: 5px;
+    color: #333333;
+    border: 1px solid #dddddd;
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    max-width: 350px; /* Limita el ancho máximo de los inputs */
+}
+
+.login-box .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 5px;
+}
+
+.login-box .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.alert {
+    margin-top: 10px;
+    font-size: 0.875rem;
+}
+
+
+/*aca comienzan los estilos de lista_muebles*/
+
+.inmuebles-grid {
+    display: flex; /* Utiliza flexbox */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+    gap: 30px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+.inmueble-card {
+    background-color: #f7fcfd; /* Color de fondo de la tarjeta */
+    border: 1px solid #ccc; /* Borde de la tarjeta */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra */
+    padding: 20px; /* Espacio interno */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición para efectos hover */
+    overflow: hidden; /* Asegura que el contenido no desborde */
+    display: flex; /* Utiliza flexbox dentro de cada tarjeta */
+    flex-direction: column; /* Organiza el contenido en columna */
+    align-items: stretch; /* Asegura que las tarjetas ocupen el mismo ancho */
+    min-width: 300px; /* Ancho mínimo para las tarjetas */
+    max-width: 300px; /* Ancho máximo para las tarjetas */
+    flex: 1 1 300px; /* Permite que las tarjetas se ajusten en tamaño */
+}
+
+
+
+/* Efectos al pasar el ratón sobre la tarjeta */
+.inmueble-card:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más prominente */
+}
+
+/* Estilo para la imagen de la tarjeta */
+.card-img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+    height: 200px; /* Ajusta la altura de la imagen */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilo para los encabezados, descripciones y otros elementos dentro de la tarjeta */
+.card-header {
+    background-color: #1a232c; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto */
+    padding: 15px; /* Espacio interno */
+    margin-bottom: 15px; /* Espacio inferior */
+}
+
+.card-header h2 {
+    margin: 0; /* Elimina el margen */
+    font-size: 1.5em; /* Tamaño del texto */
+}
+
+.card-body {
+    flex: 1; /* Permite que el cuerpo ocupe el espacio disponible */
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
+
+.card-footer {
+    background-color: #f8f9fa; /* Color de fondo del pie de página */
+    padding: 15px; /* Espacio interno */
+    text-align: center; /* Centra el texto */
+    margin-top: auto; /* Empuja el pie de página al final de la tarjeta */
+}
+
+.descripcion {
+    color: #666; /* Color del texto de la descripción */
+    margin-bottom: 15px; /* Espacio debajo de la descripción */
+    flex: 1; /* Permite que la descripción ocupe el espacio disponible */
+}
+
+.list-group-item {
+    border: none; /* Elimina el borde */
+    padding: 10px 0; /* Espacio interno */
+}
+
+.list-group-item i {
+    margin-right: 10px; /* Espacio a la derecha del ícono */
+    color: #13163a; /* Color del ícono */
+}
+
+/* Estilos para los botones */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 100%; /* Asegura que el botón ocupe todo el ancho de la tarjeta */
+    margin-top: 10px; /* Espacio superior del botón */
+}
+
+.btn-primary {
+    background-color: #111922; /* Color de fondo del botón primario */
+    border-color: #2f345e; /* Color del borde del botón primario */
+    color: #fff; /* Color del texto del botón primario */
+}
+
+.btn-primary:hover {
+    background-color: #35a9b6; /* Color de fondo en hover */
+    border-color: #2f345e; /* Color del borde en hover */
+}
+
+.alert-info {
+    background-color: #e1f5fe; /* Color de fondo de la alerta */
+    color: #01579b; /* Color del texto de la alerta */
+    padding: 20px; /* Espacio interno */
+    border-radius: 8px; /* Esquinas redondeadas */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilos específicos para etiquetas */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #5a7052;
+}
+
+/* Contenedor general para formularios y contenido */
+/* Contenedor del contenido */
+.content-container {
+    padding: 20px; /* Espacio interno alrededor del texto */
+    background-color: #ffffff; /* Fondo blanco si es necesario */
+    text-align: center; /* Centra el texto horizontalmente */
+    border-radius: 8px; /* Bordes redondeados (opcional) */
+
+}
+/* Estilo específico para el contenedor de la imagen del inmueble */
+#inmueble-image-container {
+    text-align: center; /* Centra la imagen dentro del contenedor */
+    margin-bottom: 20px; /* Espacio debajo del contenedor de la imagen */
+}
+
+/* Estilo específico para la imagen del inmueble dentro del contenedor */
+#inmueble-image-container img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil alrededor de la imagen */
+}
+
+
+/* Estilo para el contenedor del detalle del inmueble */
+#inmueble-details {
+    background-color: white; /* Sin fondo para el contenedor */
+    color: #000; /* Color de texto en negro para el contenedor */
+    padding: 20px; /* Espaciado interno de 20px alrededor del contenido */
+    border-radius: 8px; /* Bordes redondeados con un radio de 8px */
+    box-shadow: none; /* Sin sombra alrededor del contenedor */
+}
+
+/* Estilo para los términos en la lista de definición */
+#inmueble-details dl dt {
+    font-weight: bold; /* Negrita para los términos */
+    color: #000; /* Color de texto en negro para los términos */
+}
+
+/* Estilo para las descripciones en la lista de definición */
+#inmueble-details dl dd {
+    color: #000; /* Color de texto en negro para las descripciones */
+}
+
+/* Estilo para el encabezado h1 en el contenido principal */
+.content-container h1 {
+    color: #000000; /* Color del texto */
+    font-family: 'Montserrat', sans-serif; /* Fuente personalizada (asegúrate de cargarla si es externa) */
+    font-size: 2.5rem; /* Tamaño de la fuente */
+    font-weight: bold; /* Peso de la fuente */
+    border-radius: 8px; /* Bordes redondeados (opcional) */
+    margin-bottom: 30px; /* Espacio debajo del título */
+    text-transform: uppercase; /* Opcional: Transforma el texto a mayúsculas */
+    line-height: 1.2; /* Altura de línea para mejorar la legibilidad */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-align: center; /* Alineación del texto */
+    padding: 10px; /* Espaciado interno alrededor del texto */
+    border-bottom: 2px solid #000000; /* Línea debajo del título */
+}
+
+/* Solicitudes de arriendo */
+#solicitudes-container {
+    background-color: #f8f9fa; /* Cambia el fondo del contenedor general */
+    padding: 40px;
+}
+
+.solicitud-card {
+    background-color: #ffffff; /* Fondo blanco para las tarjetas */
+    color: #333333; /* Texto oscuro */
+    border: 1px solid #dddddd; /* Borde ligero */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.solicitud-card:hover {
+    transform: translateY(-5px); /* Efecto hover */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.solicitud-title {
+    color: #007bff; /* Título en azul */
+}
+
+.solicitud-details p {
+    color: #555555; /* Color de texto ligeramente más claro */
+}
+
+.solicitud-card .fecha, .solicitud-card .email {
+    font-size: 0.875rem; /* Tamaño de fuente pequeño */
+    color: #999999; /* Color gris claro para fechas y correos */
+}
+
+.alert-info {
+    background-color: #e9f7fd;
+    color: #31708f;
+}
+
+
+/* Estilo del encabezado */
+.dynamic-heading {
+    font-family: 'Montserrat', sans-serif; /* Fuente profesional */
+    font-size: 2.5rem; /* Tamaño del texto ajustado para destacar */
+    color: #000000 !important; /* Asegura que el color negro se aplique */
+    font-weight: bold; /* Peso de fuente para mayor impacto */
+    margin-bottom: 30px; /* Espacio inferior para separación */
+    text-transform: uppercase; /* Opcional: transforma el texto a mayúsculas para un estilo más fuerte */
+    letter-spacing: 1px; /* Espacio entre letras para mejorar la legibilidad */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Opcional: sombra sutil para mejorar la legibilidad sobre fondo blanco */
+}
+
+/* Fuente de Google Fonts para importar */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+
+/* Estilos generales para campos de formulario */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%; /* Asegura que los campos ocupen todo el ancho disponible */
+    padding: 10px; /* Espacio interno */
+    border: 2px solid #9bb913; /* Borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 16px; /* Tamaño del texto */
+    transition: border-color 0.3s ease; /* Transición para el color del borde */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #111922; /* Color del borde al enfocar */
+    outline: none; /* Elimina el contorno por defecto */
+}
+
+/* Estilos para mensajes de error */
+.error-message {
+    color: #d9534f; /* Color del texto del mensaje de error */
+    font-size: 14px; /* Tamaño del texto */
+    margin-top: 5px; /* Espacio superior */
+}
+
+/* Estilos para contenedores de autenticación y formularios */
+.auth-container,
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Color de fondo con transparencia */
+    border: 3px solid #9bb913; /* Borde */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 20px; /* Espacio interno */
+    margin: 20px auto; /* Margen automático para centrar */
+}
+
+/* Estilos para campos de formulario */
+.form-control {
+    border: 2px solid #9bb913; /* Borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 8px; /* Espacio interno */
+}
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: rgba(255, 255, 255, 0.9); /* Color de fondo con transparencia */
+    padding: 20px 0; /* Espacio interno */
+    margin-top: 40px; /* Espacio superior */
+}
+
+.footer img {
+    max-width: 100px; /* Ancho máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #carouselExampleAutoplaying .carousel-inner {
+        display: none;
+    }
+    #carouselExampleAutoplaying .carousel-control-prev,
+    #carouselExampleAutoplaying .carousel-control-next {
+        display: none;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .inmuebles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-container,
+    .form-container {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+
+    .inmuebles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-header {
+        text-align: center;
+    }
+
+    #headerCarousel {
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+
+    .inmuebles-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1201px) {
+
+    .inmuebles-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1441px) {
+
+    .inmuebles-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

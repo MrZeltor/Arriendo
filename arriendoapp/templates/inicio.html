@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="inicio-container">
+        <div class="carrusel-container">
+            <div id="carruselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'imagenes/casa1.jpg' %}" class="d-block w-100" alt="Casa con jardín">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'imagenes/depto1.jpg' %}" class="d-block w-100" alt="Departamento moderno">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'imagenes/parcela1.jpg' %}" class="d-block w-100" alt="Parcela amplia">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="texto-presentacion">
+            <h1>Bienvenido a Arriendos Montt</h1>
+            <p>Encuentra las mejores opciones de arriendo para parcelas, departamentos y casas en nuestra plataforma. Explora nuestras ofertas y encuentra el lugar ideal para ti.</p>
+        </div>
+    </div>
+{% endblock %}
